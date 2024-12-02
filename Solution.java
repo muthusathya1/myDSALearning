@@ -1,23 +1,20 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Solution {
-    public int solve(int[] A, int B) {
-        // long t=1;
-        // long ans=0;
-        // for(int i=A.length-1;i>=0;i--)
-        // {
-        // ans=(ans+A[i]*t)%B;
-        // t=(t*10)%B;
-        // }
-        // return (int)ans;
-        long ans=0;
-        long t=1;
-        for (int i = A.length-1; i >= 0; i--) {
-            ans= (long) ((ans%B)+ (A[i]*t)%B);
-            t*=10;
-            t%=B;
+    public int solve(ArrayList<Integer> A) {
+        Collections.sort(A,Collections.reverseOrder());
+        int minCost=0;
+        int curCost=0;
+        for (int i = 0; i < A.size(); i++) {
+            curCost+=A.get(i);
         }
-        return (int) (ans%B);
+        for (int i = 0; i < A.size(); i++) {
+            minCost+=curCost;
+            curCost-=A.get(i);
+        }
+        return minCost;
     }
     public static void main(String[] args) {
-        System.out.println(new Solution().solve(new int[]{4, 3, 5, 3, 5, 3, 2, 1}, 47));
     }
 }

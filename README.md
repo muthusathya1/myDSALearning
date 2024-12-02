@@ -1,54 +1,65 @@
 # myDSALearning
-Mod Array
+Q1. Elements Removal
+Solved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
 Problem Description
 
-You are given a large number in the form of a array A of size N where each element denotes a digit of the number.
-You are also given a number B. You have to find out the value of A % B and return it.
+Given an integer array A of size N. You can remove any element from the array in one operation.
+The cost of this operation is the sum of all elements in the array present before this operation.
+
+Find the minimum cost to remove all elements from the array.
 
 
 
 Problem Constraints
 
-1 <= N <= 105
-0 <= Ai <= 9
-1 <= B <= 109
+0 <= N <= 1000
+1 <= A[i] <= 103
+
 
 
 Input Format
 
-The first argument is an integer array A.
-The second argument is an integer B.
+First and only argument is an integer array A.
+
 
 
 Output Format
 
-Return a single integer denoting the value of A % B.
+Return an integer denoting the total cost of removing all elements from the array.
+
 
 
 Example Input
 
 Input 1:
-A = [1, 4, 3]
-B = 2
+
+ A = [2, 1]
 Input 2:
 
-A = [4, 3, 5, 3, 5, 3, 2, 1]
-B = 47
+ A = [5]
 
 
 Example Output
 
 Output 1:
-1
+
+ 4
 Output 2:
 
-20
+ 5
 
 
 Example Explanation
 
 Explanation 1:
-143 is an odd number so 143 % 2 = 1.
+
+ Given array A = [2, 1]
+ Remove 2 from the array => [1]. Cost of this operation is (2 + 1) = 3.
+ Remove 1 from the array => []. Cost of this operation is (1) = 1.
+ So, total cost is = 3 + 1 = 4.
 Explanation 2:
 
-43535321 % 47 = 20
+ There is only one element in the array. So, cost of removing is 5.
