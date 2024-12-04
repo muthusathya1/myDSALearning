@@ -1,17 +1,41 @@
 import java.util.*;
 
 public class Solution {
-    public int solve(ArrayList<Integer> A) {
-        Collections.sort(A,Collections.reverseOrder());
-        for (int i = 0; i < A.size(); i++) {
-            if (A.get(i)==i) {
-                return 1;
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        Collections.sort(A,new Comparator<Integer>(){
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return countFactors(o1)-countFactors(o2);
+            }
+
+        }.thenComparing(new Comparator<Integer>() {
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                    return o1-o2;
+            }
+            
+        }));
+
+        return A;
+        
+    }
+    public Integer countFactors(int number){
+        int count=0;
+        for (int i = 1; i*i <=number; i++) {
+            if (number%i==0) {
+                if (number/i==i) {
+                    count++;                            
+                }else{
+                    count+=2;
+                }
             }
         }
-        return -1;
+        return count;
     }
+
     public static void main(String[] args) {
-        System.out.println(new Solution().solve(new ArrayList<>(List.of(1,2,3,4,5))));
+        System.out.println(new Solution().countFactors(10));
     }
 }
-    

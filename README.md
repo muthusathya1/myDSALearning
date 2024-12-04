@@ -1,55 +1,48 @@
 # myDSALearning
-## Noble Integer
+##  Factors sort
 
 Problem Description
 
-Given an integer array A, find if an integer p exists in the array such that the number of integers greater than p in the array equals p.
+You are given an array A of N elements. Sort the given array in increasing order of number of distinct factors of each element, i.e., element having the least number of factors should be the first to be displayed and the number having highest number of factors should be the last one. If 2 elements have same number of factors, then number with less value should come first.
 
+Note: You cannot use any extra space
 
 
 Problem Constraints
 
-1 <= |A| <= 2*105
--108 <= A[i] <= 108
+1 <= N <= 104
+1 <= A[i] <= 104
 
 
 Input Format
 
-First and only argument is an integer array A.
-
+First argument A is an array of integers.
 
 
 Output Format
 
-Return 1 if any such integer p is present else, return -1.
-
+Return an array of integers.
 
 
 Example Input
 
 Input 1:
-
- A = [3, 2, 1, 3]
+A = [6, 8, 9]
 Input 2:
-
- A = [1, 1, 3, 3]
+A = [2, 4, 7]
 
 
 Example Output
 
 Output 1:
-
- 1
+[9, 6, 8]
 Output 2:
-
- -1
+[2, 7, 4]
 
 
 Example Explanation
 
-Explanation 1:
-
- For integer 2, there are 2 greater elements in the array..
-Explanation 2:
-
- There exist no integer satisfying the required conditions.
+For Input 1:
+The number 9 has 3 factors, 6 has 4 factors and 8 has 4 factors.
+For Input 2:
+The number 2 has 2 factors, 7 has 2 factors and 4 has 3 factors.
