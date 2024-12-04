@@ -1,20 +1,17 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class Solution {
     public int solve(ArrayList<Integer> A) {
         Collections.sort(A,Collections.reverseOrder());
-        int minCost=0;
-        int curCost=0;
         for (int i = 0; i < A.size(); i++) {
-            curCost+=A.get(i);
+            if (A.get(i)==i) {
+                return 1;
+            }
         }
-        for (int i = 0; i < A.size(); i++) {
-            minCost+=curCost;
-            curCost-=A.get(i);
-        }
-        return minCost;
+        return -1;
     }
     public static void main(String[] args) {
+        System.out.println(new Solution().solve(new ArrayList<>(List.of(1,2,3,4,5))));
     }
 }
+    

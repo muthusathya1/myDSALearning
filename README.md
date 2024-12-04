@@ -1,23 +1,16 @@
 # myDSALearning
-Q1. Elements Removal
-Solved
-feature icon
-Using hints except Complete Solution is Penalty free now
-Use Hint
+## Noble Integer
+
 Problem Description
 
-Given an integer array A of size N. You can remove any element from the array in one operation.
-The cost of this operation is the sum of all elements in the array present before this operation.
-
-Find the minimum cost to remove all elements from the array.
+Given an integer array A, find if an integer p exists in the array such that the number of integers greater than p in the array equals p.
 
 
 
 Problem Constraints
 
-0 <= N <= 1000
-1 <= A[i] <= 103
-
+1 <= |A| <= 2*105
+-108 <= A[i] <= 108
 
 
 Input Format
@@ -28,7 +21,7 @@ First and only argument is an integer array A.
 
 Output Format
 
-Return an integer denoting the total cost of removing all elements from the array.
+Return 1 if any such integer p is present else, return -1.
 
 
 
@@ -36,30 +29,27 @@ Example Input
 
 Input 1:
 
- A = [2, 1]
+ A = [3, 2, 1, 3]
 Input 2:
 
- A = [5]
+ A = [1, 1, 3, 3]
 
 
 Example Output
 
 Output 1:
 
- 4
+ 1
 Output 2:
 
- 5
+ -1
 
 
 Example Explanation
 
 Explanation 1:
 
- Given array A = [2, 1]
- Remove 2 from the array => [1]. Cost of this operation is (2 + 1) = 3.
- Remove 1 from the array => []. Cost of this operation is (1) = 1.
- So, total cost is = 3 + 1 = 4.
+ For integer 2, there are 2 greater elements in the array..
 Explanation 2:
 
- There is only one element in the array. So, cost of removing is 5.
+ There exist no integer satisfying the required conditions.
