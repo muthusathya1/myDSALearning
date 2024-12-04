@@ -1,41 +1,28 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Solution {
-    public ArrayList<Integer> solve(ArrayList<Integer> A) {
-        Collections.sort(A,new Comparator<Integer>(){
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public String largestNumber(final List<Integer> A) {
+             Collections.sort(A, new Comparator<Integer>() {
 
             @Override
             public int compare(Integer o1, Integer o2) {
-                return countFactors(o1)-countFactors(o2);
-            }
-
-        }.thenComparing(new Comparator<Integer>() {
-
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                    return o1-o2;
+                String a=String.valueOf(o1);
+                String b=String.valueOf(o2);
+                return (b+""+a).compareTo(a+""+b);
             }
             
-        }));
-
-        return A;
+        });
+        StringBuilder ans=new StringBuilder();
+        A.forEach(ans::append);
         
-    }
-    public Integer countFactors(int number){
-        int count=0;
-        for (int i = 1; i*i <=number; i++) {
-            if (number%i==0) {
-                if (number/i==i) {
-                    count++;                            
-                }else{
-                    count+=2;
-                }
-            }
+        if (ans.charAt(0)=='0') {
+            return "0";
         }
-        return count;
-    }
 
-    public static void main(String[] args) {
-        System.out.println(new Solution().countFactors(10));
+        return ans.toString();
     }
 }
+
