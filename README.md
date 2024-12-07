@@ -1,60 +1,59 @@
 # myDSALearning
-## Sort by Color
+## Arithmetic progression
 
 Problem Description
 
-Given an array with N objects colored red, white, or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+Given an integer array A of size N. Return 1 if the array can be arranged to form an arithmetic progression, otherwise return 0.
 
-We will represent the colors as,
-
-    red -> 0
-    white -> 1
-    blue -> 2
-
-Note: Using the library sort function is not allowed.
+A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
 
 
 
 Problem Constraints
 
-    1 <= N <= 1000000
-    0 <= A[i] <= 2
+2 <= N <= 105
+
+-109 <= A[i] <= 109
+
 
 
 Input Format
 
-First and only argument of input contains an integer array A.
+The first and only argument is an integer array A of size N.
+
 
 
 Output Format
 
-Return an integer array in asked order
+Return 1 if the array can be rearranged to form an arithmetic progression, otherwise return 0.
+
 
 
 Example Input
 
-Input 1 :
+Input 1:
 
-    A = [0, 1, 2, 0, 1, 2]
-
+ A = [3, 5, 1]
 Input 2:
 
-    A = [0]
+ A = [2, 4, 1]
 
 
 Example Output
 
 Output 1:
 
-    [0, 0, 1, 1, 2, 2]
+ 1
 Output 2:
 
-    [0]
+ 0
 
 
 Example Explanation
 
 Explanation 1:
-    [0, 0, 1, 1, 2, 2] is the required order.
+
+ We can reorder the elements as [1, 3, 5] or [5, 3, 1] with differences 2 and -2 respectively, between each consecutive elements.
 Explanation 2:
-    [0] is the required order
+
+ There is no way to reorder the elements to obtain an arithmetic progression.
