@@ -1,59 +1,55 @@
 # myDSALearning
-## Arithmetic progression
-
+## Tens Digits Sorting
 Problem Description
 
-Given an integer array A of size N. Return 1 if the array can be arranged to form an arithmetic progression, otherwise return 0.
+Given an array A of N integers. Sort the array in increasing order of the value at the tens place digit of every number.
 
-A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
-
+If a number has no tens digit, we can assume value to be 0.
+If 2 numbers have same tens digit, in that case number with max value will come first
+Solution should be based on comparator.
 
 
 Problem Constraints
 
-2 <= N <= 105
+1 <= N <= 105
 
--109 <= A[i] <= 109
+1 <= A[i] <= 109
 
 
 
 Input Format
 
-The first and only argument is an integer array A of size N.
+First argument A is an array of integers.
 
 
 
 Output Format
 
-Return 1 if the array can be rearranged to form an arithmetic progression, otherwise return 0.
+Return the array after sorting
 
 
 
 Example Input
 
 Input 1:
-
- A = [3, 5, 1]
+A = [15, 11, 7, 19]
 Input 2:
-
- A = [2, 4, 1]
+A = [2, 24, 22, 19]
 
 
 Example Output
 
 Output 1:
-
- 1
+[7, 19, 15, 11]
 Output 2:
-
- 0
+[2, 19, 24, 22]
 
 
 Example Explanation
 
-Explanation 1:
-
- We can reorder the elements as [1, 3, 5] or [5, 3, 1] with differences 2 and -2 respectively, between each consecutive elements.
-Explanation 2:
-
- There is no way to reorder the elements to obtain an arithmetic progression.
+For Input 1:
+The sorted order is [7, 19, 15, 11]. The tens digit of 7 is 0, 
+and that of 19, 15 and 11 is 1.
+For Input 2:
+The sorted order is [2, 19, 24, 22]. The tens digit of 2 is 0, 
+that of 19 is 1 and that of 22 and 24 is 2.

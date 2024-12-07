@@ -1,18 +1,24 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Solution {
-    public int solve(ArrayList<Integer> A) {
-        int n = A.size();
-        Collections.sort(A);
-        int dif = A.get(1) - A.get(0);
-        int ans = 1;
-        for(int i = 1; i < n; i++){
-            if(A.get(i) - A.get(i-1) != dif){
-                ans = 0;
-                break;
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        Collections.sort(A , new Comparator<Integer>(){
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return (o1%100-o1%10)- (o2%100-o2%10);
             }
-        }
-        return ans;
+
+        }.thenComparing(new Comparator<Integer>() {
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2-o1;
+            }
+            
+        }) 
+        );
+        return A;
     }
 }
