@@ -1,24 +1,42 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 public class Solution {
-    public ArrayList<Integer> solve(ArrayList<Integer> A) {
-        Collections.sort(A , new Comparator<Integer>(){
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return (o1%100-o1%10)- (o2%100-o2%10);
+    public int solve(String A) {
+        int zeroes=0;
+        int totalOnes=0;
+        int left=0;
+        int right=0;
+        int maxL=0;
+        for (int i = 0; i < A.length(); i++) {
+            if(A.charAt(i)=='1'){
+                totalOnes++;
             }
-
-        }.thenComparing(new Comparator<Integer>() {
-
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2-o1;
+        }
+        if(totalOnes==A.length()){
+            return totalOnes;
+        }
+        for(int i=0;i<A.length();i++){
+            if (A.charAt(i)=='1') {
+                if (zeroes==1) {
+                    right++;
+                    maxL= Math.max(maxL, left+right+((left+right)<totalOnes?1:0));
+                }else{
+                    left++;
+                }
+            }else{
+                zeroes++;
+                if (zeroes==1) {
+                   maxL= Math.max(maxL, left+right+((left+right)<totalOnes?1:0));
+                }else{
+                    zeroes=1;
+                    left=right;
+                    right=0;
+                }
             }
-            
-        }) 
-        );
-        return A;
+        }
+        return maxL;
     }
-}
+    
+    
+    }
+    
+    
+
