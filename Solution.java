@@ -1,46 +1,23 @@
-    public class Solution {
-        public int solve(String A) {
-            int zeroes=0;
-            int totalOnes=0;
-            int left=0;
-            int right=0;
-            int maxL=0;
-            for (int i = 0; i < A.length(); i++) {
-                if(A.charAt(i)=='1'){   
-                    totalOnes++;
+public class Solution {
+    public int solve(int[] A) {
+        int N=A.length;
+        int ans=0;
+        for(int i=0;i<N;i++){
+            int l=0;
+            int r=0;
+            for(int j=0;j<i;j++){
+                if(A[j]<A[i]){
+                    l++;
                 }
             }
-            if(totalOnes==A.length()){
-                return totalOnes;
-            }
-            for(int i=0;i<A.length();i++){
-                if (A.charAt(i)=='1') {
-                    if (zeroes==1) {
-                        right++;
-                        // maxL= Math.max(maxL, left+right+((left+right)<totalOnes?1:0));
-                        if (i==A.length()-1) {
-                        maxL= Math.max(maxL, left+right+((left+right)<totalOnes?1:0));
-                        }
-                    }else{
-                        left++;
-                    }
-                }else{
-                    zeroes++;
-                    if (zeroes==1) {
-                    maxL= Math.max(maxL, left+((left+right)<totalOnes?1:0));
-                    }else{
-                        maxL= Math.max(maxL, left+right+((left+right)<totalOnes?1:0));
-                        zeroes=1;
-                        left=right;
-                        right=0;
-                    }
+            for(int j=N-1;j>i;j--){
+                if(A[i]<A[j]){
+                    r++;
                 }
             }
-            return maxL;
+            ans+=(l*r);
         }
-        
-        
-        }
-        
-        
-
+        return ans;
+    }
+}
+    
