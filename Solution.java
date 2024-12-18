@@ -1,23 +1,30 @@
 import java.util.*;
-
 public class Solution {
-    public ArrayList<ArrayList<Integer>> solve(ArrayList<Integer> A, ArrayList<Integer> B) {
-        ArrayList<ArrayList<Integer>> ans=new ArrayList<>();
-        for (int index = 0; index < B.size(); index++) {
-            int rotations=B.get(index)%A.size();
-            ArrayList<Integer> arrayList=new ArrayList<>();
-            for (int i = rotations; i < A.size(); i++) {
-                arrayList.add(A.get(i));
-            }
-            for (int i = 0; i < rotations; i++) {
-                arrayList.add(A.get(i));
-            }
-            ans.add(arrayList);
+    public int solve(String A, int B) {
+        int[] freq=new int[26];
+        for (int i = 0; i < A.length(); i++) {
+            ++freq[A.charAt(i)-'a'];
         }
-        return ans;
+        // System.out.println(Arrays.toString(freq));
+        ArrayList<Integer> uniqList=new ArrayList<>();
+        for (int i = 0; i < freq.length; i++) {
+            if (freq[i]>0) {
+                uniqList.add(freq[i]);
+            }
+        }
+        Collections.sort(uniqList);
+        // System.out.println(uniqList);
+        int allowedCharacters=B;
+        for (int i = 0; i < uniqList.size(); i++) {
+            allowedCharacters-=uniqList.get(i);
+            if (allowedCharacters<0) {
+                return uniqList.size()-i;
+            }
+        }
+        
+        return 1;
     }
-
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> ans=new Solution()
+        System.out.println(new Solution().solve("aaaaaaaaaaaaaaaaabbbbbbbbbbbbbbfff",100));
     }
 }
