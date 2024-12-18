@@ -1,23 +1,23 @@
+import java.util.*;
+
 public class Solution {
-    public int solve(int[] A) {
-        int N=A.length;
-        int ans=0;
-        for(int i=0;i<N;i++){
-            int l=0;
-            int r=0;
-            for(int j=0;j<i;j++){
-                if(A[j]<A[i]){
-                    l++;
-                }
+    public ArrayList<ArrayList<Integer>> solve(ArrayList<Integer> A, ArrayList<Integer> B) {
+        ArrayList<ArrayList<Integer>> ans=new ArrayList<>();
+        for (int index = 0; index < B.size(); index++) {
+            int rotations=B.get(index)%A.size();
+            ArrayList<Integer> arrayList=new ArrayList<>();
+            for (int i = rotations; i < A.size(); i++) {
+                arrayList.add(A.get(i));
             }
-            for(int j=N-1;j>i;j--){
-                if(A[i]<A[j]){
-                    r++;
-                }
+            for (int i = 0; i < rotations; i++) {
+                arrayList.add(A.get(i));
             }
-            ans+=(l*r);
+            ans.add(arrayList);
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> ans=new Solution()
+    }
 }
-    

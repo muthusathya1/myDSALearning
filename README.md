@@ -1,47 +1,31 @@
 # myDSALearning
-## Count Increasing Triplets
-
-Problem Description
-
-You are given an array A of N elements. Find the number of triplets i,j and k such that i<j<k and A[i]<A[j]<A[k]
+## Multiple left rotations of the array
 
 
-Problem Constraints
-
-1 <= N <= 103
-1 <= A[i] <= 109
+    [ [3, 4, 5, 1, 2]
+     [4, 5, 1, 2, 3] ]
 
 
-Input Format
-
-First argument A is an array of integers.
-
-
-Output Format
-
-Return an integer.
-
-
-Example Input
-
-Input 1:
-A = [1, 2, 4, 3]
-Input 2:
-A = [2, 1, 2, 3]
-
-
-Example Output
-
-Output 1:
-2
 Output 2:
-1
+
+    
+    [ [17, 100, 11, 5] ]
+
 
 
 Example Explanation
 
-For Input 1:
-The triplets that satisfy the conditions are [1, 2, 3] and [1, 2, 4].
-For Input 2:
- 
-The triplet that satisfy the conditions is [1, 2, 3].
+for input 1 -> B[0] = 2 which requires 2 times left rotations
+
+1: [2, 3, 4, 5, 1]
+
+2: [3, 4, 5, 1, 2]
+
+B[1] = 3 which requires 3 times left rotation
+
+1: [2, 3, 4, 5, 1]
+
+2: [3, 4, 5, 1, 2]
+
+2: [4, 5, 1, 2, 4]
+
