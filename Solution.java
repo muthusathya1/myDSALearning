@@ -18,6 +18,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> ans=new Solution()
+   
     }
 }
