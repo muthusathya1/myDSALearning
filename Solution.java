@@ -1,30 +1,17 @@
-import java.util.*;
 public class Solution {
-    public int solve(String A, int B) {
-        int[] freq=new int[26];
-        for (int i = 0; i < A.length(); i++) {
-            ++freq[A.charAt(i)-'a'];
-        }
-        // System.out.println(Arrays.toString(freq));
-        ArrayList<Integer> uniqList=new ArrayList<>();
-        for (int i = 0; i < freq.length; i++) {
-            if (freq[i]>0) {
-                uniqList.add(freq[i]);
+    public int solve(String A) {
+        int count=0;
+        String word="bob";
+        for (int i = 0; i < A.length()-word.length()+1; i++) {
+            if (A.charAt(i)==word.charAt(0)) {
+                if (A.substring(i,i+word.length()).equals(word)) {
+                    count++;
+                }
             }
         }
-        Collections.sort(uniqList);
-        // System.out.println(uniqList);
-        int allowedCharacters=B;
-        for (int i = 0; i < uniqList.size(); i++) {
-            allowedCharacters-=uniqList.get(i);
-            if (allowedCharacters<0) {
-                return uniqList.size()-i;
-            }
-        }
-        
-        return 1;
+        return count;
     }
     public static void main(String[] args) {
-        System.out.println(new Solution().solve("aaaaaaaaaaaaaaaaabbbbbbbbbbbbbbfff",100));
+        System.out.println(new Solution().solve("bobob"));
     }
 }
