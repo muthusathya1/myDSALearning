@@ -1,68 +1,46 @@
 # myDSALearning
-## Longest Common Prefix
+##  Change character
 
 Problem Description
 
-Given the array of strings A, you need to find the longest string S, which is the prefix of ALL the strings in the array.
+You are given a string A of size N consisting of lowercase alphabets.
 
+You can change at most B characters in the given string to any other lowercase alphabet such that the number of distinct characters in the string is minimized.
 
-The longest common prefix for a pair of strings S1 and S2 is the longest string S which is the prefix of both S1 and S2.
-
-Example: the longest common prefix of "abcdefgh" and "abcefgh" is "abc".
-
-
-
+Find the minimum number of distinct characters in the resulting string.
 
 Problem Constraints
 
-0 <= sum of length of all strings <= 1000000
+    1 <= N <= 100000
 
-
+    0 <= B <= N
 
 Input Format
 
-The only argument given is an array of strings A.
+    The first argument is a string A.
 
-
+    The second argument is an integer B.
 
 Output Format
 
-Return the longest common prefix of all strings in A.
+    Return an integer denoting the minimum number of distinct characters in the string.
 
 
 
 Example Input
 
-Input 1:
-
-    A = ["abcdefgh", "aefghijk", "abcefgh"]
-
-Input 2:
-
-    A = ["abab", "ab", "abcd"];
-
-
-
+    A = "abcabbccd"
+    B = 3   
 
 
 
 Example Output
 
-Output 1:
+    2
 
-    "a"
-
-Output 2:
-
-    "ab"
 
 
 Example Explanation
 
-Explanation 1:
-
-    Longest common prefix of all the strings is "a".
-
-Explanation 2:
-
-    Longest common prefix of all the strings is "ab".
+We can change both 'a' and one 'd' into 'b'.So the new string becomes "bbcbbbccb".
+So the minimum number of distinct character will be 2.
