@@ -1,31 +1,23 @@
-import java.util.*;
+import java.util.Arrays;
+
+// Problem Description
+
+// You are given two lowercase strings A and B each of length N. Return 1 if they are anagrams to each other and 0 if not.
+
+// Note : Two strings A and B are called anagrams to each other if A can be formed after rearranging the letters of B.
 
 public class Solution {
-    public int solve(String A, int B) {
-        // Count the frequency of each character in the string
-        int[] cnt = new int[26];
-        for (char c : A.toCharArray()) {
-            cnt[c - 'a']++;
-        }
-
-        // Store the frequency of each character in a priority queue (min-heap)
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for (int frequency : cnt) {
-            if (frequency > 0) {
-                pq.add(frequency);
-            }
-        }
-
-        // Remove the elements from the priority queue until the sum of the elements is less than B
-        while (!pq.isEmpty() && B >= pq.peek()) {
-            B -= pq.poll();
+    public int solve(String A, String B) {
+        if (A.length() != B.length()) {
+            return 0;
         }
         
-        // If the priority queue is empty, return 1
-        if (pq.size()==0) {
-            return 1;
-        }
-        // Return the number of elements left in the priority queue
-        return pq.size();
+        char[] aArray = A.toCharArray();
+        char[] bArray = B.toCharArray();
+        
+        Arrays.sort(aArray);
+        Arrays.sort(bArray);
+        
+        return Arrays.equals(aArray, bArray) ? 1 : 0;
     }
 }
