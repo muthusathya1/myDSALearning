@@ -1,31 +1,68 @@
 # myDSALearning
-## Multiple left rotations of the array
+## Longest Common Prefix
+
+Problem Description
+
+Given the array of strings A, you need to find the longest string S, which is the prefix of ALL the strings in the array.
 
 
-    [ [3, 4, 5, 1, 2]
-     [4, 5, 1, 2, 3] ]
+The longest common prefix for a pair of strings S1 and S2 is the longest string S which is the prefix of both S1 and S2.
 
+Example: the longest common prefix of "abcdefgh" and "abcefgh" is "abc".
+
+
+
+
+Problem Constraints
+
+0 <= sum of length of all strings <= 1000000
+
+
+
+Input Format
+
+The only argument given is an array of strings A.
+
+
+
+Output Format
+
+Return the longest common prefix of all strings in A.
+
+
+
+Example Input
+
+Input 1:
+
+    A = ["abcdefgh", "aefghijk", "abcefgh"]
+
+Input 2:
+
+    A = ["abab", "ab", "abcd"];
+
+
+
+
+
+
+Example Output
+
+Output 1:
+
+    "a"
 
 Output 2:
 
-    
-    [ [17, 100, 11, 5] ]
-
+    "ab"
 
 
 Example Explanation
 
-for input 1 -> B[0] = 2 which requires 2 times left rotations
+Explanation 1:
 
-1: [2, 3, 4, 5, 1]
+    Longest common prefix of all the strings is "a".
 
-2: [3, 4, 5, 1, 2]
+Explanation 2:
 
-B[1] = 3 which requires 3 times left rotation
-
-1: [2, 3, 4, 5, 1]
-
-2: [3, 4, 5, 1, 2]
-
-2: [4, 5, 1, 2, 4]
-
+    Longest common prefix of all the strings is "ab".
