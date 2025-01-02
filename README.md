@@ -1,59 +1,75 @@
 # myDSALearning
-##  Count Pair Difference
+##  Pair With Given Difference
 
 
 Problem Description
 
-You are given an array A of N integers and an integer B.
-Count the number of pairs (i,j) such that A[i] - A[j] = B and i ≠ j.
+Given an one-dimensional unsorted array A containing N integers.
 
-Since the answer can be very large, return the remainder after dividing the count with 109+7.
+You are also given an integer B, find if there exists a pair of elements in the array whose difference is B.
+
+Return 1 if any such pair exists else return 0.
+
 
 
 Problem Constraints
 
 1 <= N <= 105
-1 <= A[i] <= 109
-1 <= B <= 109
+-103 <= A[i] <= 103
+-105 <= B <= 105
 
 
 Input Format
 
-First argument A is an array of integers and second argument B is an integer.
+First argument is an integer array A of size N.
+
+Second argument is an integer B.
+
 
 
 Output Format
 
-Return an integer.
+Return 1 if any such pair exists else return 0.
+
 
 
 Example Input
 
 Input 1:
 
-A = [3, 5, 1, 2]
-B = 4
+ A = [5, 10, 3, 2, 50, 80]
+ B = 78
 Input 2:
 
-A = [1, 2, 1, 2]
-B = 1
+ A = [-10, 20]
+ B = 30
+Input 2=3:
+
+ A = [-100, 20, 80]
+ B = 9
 
 
 Example Output
 
 Output 1:
 
-1
+ 1
 Output 2:
 
-4
+ 1
+Output 3:
+
+ 0
 
 
 Example Explanation
 
-Example 1:
+Explanation 1:
 
-The only pair is (2, 3) which gives difference as 4
-Example 2:
+ Pair (80, 2) gives a difference of 78.
+Explanation 2:
 
-The pair which gives difference as 3 are (2, 1), (4, 1), (2, 3) and (4, 3). 
+ Pair (20, -10) gives a difference of 30 i.e 20 - (-10) => 20 + 10 => 30
+Explanation 3:
+
+ There is no such pairs, that has a difference of 9.
