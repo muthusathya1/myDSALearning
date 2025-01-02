@@ -1,46 +1,89 @@
 # myDSALearning
-##  Change character
+##  Sub-array with 0 sum
 
 Problem Description
 
-You are given a string A of size N consisting of lowercase alphabets.
+Given an array of integers A, find and return whether the given array contains a non-empty subarray with a sum equal to 0.
 
-You can change at most B characters in the given string to any other lowercase alphabet such that the number of distinct characters in the string is minimized.
+If the given array contains a sub-array with sum zero return 1, else return 0.
 
-Find the minimum number of distinct characters in the resulting string.
+
+
 
 Problem Constraints
 
-    1 <= N <= 100000
+1 <= |A| <= 100000
 
-    0 <= B <= N
+-10^9 <= A[i] <= 10^9
+
+
+
 
 Input Format
 
-    The first argument is a string A.
+The only argument given is the integer array A.
 
-    The second argument is an integer B.
+
 
 Output Format
 
-    Return an integer denoting the minimum number of distinct characters in the string.
+Return whether the given array contains a subarray with a sum equal to 0.
 
 
 
 Example Input
 
-    A = "abcabbccd"
-    B = 3   
+Input 1:
+
+
+ A = [1, 2, 3, 4, 5]
+
+
+Input 2:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ A = [4, -1, 1]
+
+
+
+
+
+
+
+
 
 
 
 Example Output
 
-    2
+Output 1:
 
+ 0
+Output 2:
+
+ 1
 
 
 Example Explanation
 
-We can change both 'a' and one 'd' into 'b'.So the new string becomes "bbcbbbccb".
-So the minimum number of distinct character will be 2.
+Explanation 1:
+
+ No subarray has sum 0.
+Explanation 2:
+
+ The subarray [-1, 1] has sum 0.
