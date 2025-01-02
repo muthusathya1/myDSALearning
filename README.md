@@ -1,56 +1,83 @@
 # myDSALearning
-##  Longest Subarray Zero Sum
+##  Check Pair Sum
+
 
 Problem Description
 
-Given an array A of N integers.
-Find the length of the longest subarray in the array which sums to zero.
-
-If there is no subarray which sums to zero then return 0.
-
+Given an Array of integers B, and a target sum A.
+Check if there exists a pair (i,j) such that Bi + Bj = A and i!=j.
 
 
 Problem Constraints
 
-1 <= N <= 105
--109 <= A[i] <= 109
+1 <= Length of array B <= 105
+0 <= Bi <= 109
+0 <= A <= 109
 
 
 Input Format
 
-Single argument which is an integer array A.
+First argument A is the Target sum, and second argument is the array B
 
 
 Output Format
 
-Return an integer.
+Return an integer value 1 if there exists such pair, else return 0.
 
 
 Example Input
 
 Input 1:
 
- A = [1, -2, 1, 2]
+
+
+
+
+
+
+
+A = 8   
+B = [3, 5, 1, 2, 1, 2]
 Input 2:
 
- A = [3, 2, -1]
+A = 21   
+B = [9, 10, 7, 10, 9, 1, 5, 1, 5]
+
+
+
+
+
+
+
 
 
 Example Output
 
 Output 1:
 
-3
+
+
+
+
+
+
+
+1
 Output 2:
 
 0
 
 
+
+
+
+
+
+
+
 Example Explanation
 
-Explanation 1:
-
- [1, -2, 1] is the largest subarray which sums up to 0.
-Explanation 2:
-
- No subarray sums up to 0.
+Example 1:
+It is possible to obtain sum 8 using 3 and 5.
+Example 2:
+There is no such pair exists.

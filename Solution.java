@@ -1,22 +1,14 @@
 import java.util.*;
 
-
 public class Solution {
-    public int solve(ArrayList<Integer> A) {
-       HashMap<Long,Integer> sumFirstIndex=new HashMap<>();
-        long sum=0;
-        int length=0;
-        for (int index = 0; index < A.size(); index++) {
-            sum+=A.get(index);
-            if (sumFirstIndex.containsKey(sum)) {
-                length=Math.max(length,index-sumFirstIndex.get(sum));
-            }else if(sum==0){
-                length=Math.max(length,index+1);
-            }else
-            {
-                sumFirstIndex.put(sum, index);
+    public int solve(int A, ArrayList<Integer> B) {
+        Set<Integer> complement = new HashSet<>();
+        for (int num : B) {
+            if (complement.contains(num)) {
+                return 1;
             }
+            complement.add(A - num);
         }
-        return length;
+        return 0;
     }
 }
