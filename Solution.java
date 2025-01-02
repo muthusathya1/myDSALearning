@@ -1,23 +1,22 @@
 import java.util.*;
 
+
 public class Solution {
     public int solve(ArrayList<Integer> A) {
-        HashMap<Integer, Integer> freq = new HashMap<>();
-        int count = 0;
-
-        for (int num : A) {
-            if (freq.containsKey(num)) {
-                if (freq.get(num) == 1) {
-                    count--;
-                }
-                freq.put(num, freq.get(num) + 1);
-            } else {
-                freq.put(num, 1);
-                count++;
+       HashMap<Long,Integer> sumFirstIndex=new HashMap<>();
+        long sum=0;
+        int length=0;
+        for (int index = 0; index < A.size(); index++) {
+            sum+=A.get(index);
+            if (sumFirstIndex.containsKey(sum)) {
+                length=Math.max(length,index-sumFirstIndex.get(sum));
+            }else if(sum==0){
+                length=Math.max(length,index+1);
+            }else
+            {
+                sumFirstIndex.put(sum, index);
             }
         }
-
-        return count;
+        return length;
     }
 }
-                        

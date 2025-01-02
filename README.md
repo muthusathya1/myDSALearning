@@ -1,11 +1,13 @@
 # myDSALearning
-##  Count Subarray Zero Sum
+##  Longest Subarray Zero Sum
 
 Problem Description
 
 Given an array A of N integers.
+Find the length of the longest subarray in the array which sums to zero.
 
-Find the count of the subarrays in the array which sums to zero. Since the answer can be very large, return the remainder on dividing the result with 109+7
+If there is no subarray which sums to zero then return 0.
+
 
 
 Problem Constraints
@@ -28,10 +30,10 @@ Example Input
 
 Input 1:
 
- A = [1, -1, -2, 2]
+ A = [1, -2, 1, 2]
 Input 2:
 
- A = [-1, 2, -1]
+ A = [3, 2, -1]
 
 
 Example Output
@@ -41,14 +43,14 @@ Output 1:
 3
 Output 2:
 
-1
+0
 
 
 Example Explanation
 
 Explanation 1:
 
- The subarrays with zero sum are [1, -1], [-2, 2] and [1, -1, -2, 2].
+ [1, -2, 1] is the largest subarray which sums up to 0.
 Explanation 2:
 
- The subarray with zero sum is [-1, 2, -1].
+ No subarray sums up to 0.
