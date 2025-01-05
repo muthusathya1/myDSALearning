@@ -1,35 +1,45 @@
 # myDSALearning
-##  Pair With Given Difference
-
+##   Subarray with given sum
 
 Problem Description
 
-Given an one-dimensional unsorted array A containing N integers.
+Given an array of positive integers A and an integer B, find and return first continuous subarray which adds to B.
 
-You are also given an integer B, find if there exists a pair of elements in the array whose difference is B.
 
-Return 1 if any such pair exists else return 0.
+
+
+
+
+If the answer does not exist return an array with a single integer "-1".
+
+First sub-array means the sub-array for which starting index in minimum.
+
+
+
+
+
 
 
 
 Problem Constraints
 
-1 <= N <= 105
--103 <= A[i] <= 103
--105 <= B <= 105
+1 <= length of the array <= 100000
+1 <= A[i] <= 109
+1 <= B <= 109
+
 
 
 Input Format
 
-First argument is an integer array A of size N.
+The first argument given is the integer array A.
 
-Second argument is an integer B.
+The second argument given is integer B.
 
 
 
 Output Format
 
-Return 1 if any such pair exists else return 0.
+Return the first continuous sub-array which adds to B and if the answer does not exist return an array with a single integer "-1".
 
 
 
@@ -37,39 +47,37 @@ Example Input
 
 Input 1:
 
- A = [5, 10, 3, 2, 50, 80]
- B = 78
+ A = [1, 2, 3, 4, 5]
+ B = 5
 Input 2:
 
- A = [-10, 20]
- B = 30
-Input 2=3:
-
- A = [-100, 20, 80]
- B = 9
+ A = [5, 10, 20, 100, 105]
+ B = 110
 
 
 Example Output
 
 Output 1:
 
- 1
+
+
+
+
+ [2, 3]
 Output 2:
 
- 1
-Output 3:
+ [-1]
 
- 0
+
+
+
 
 
 Example Explanation
 
 Explanation 1:
 
- Pair (80, 2) gives a difference of 78.
+ [2, 3] sums up to 5.
 Explanation 2:
 
- Pair (20, -10) gives a difference of 30 i.e 20 - (-10) => 20 + 10 => 30
-Explanation 3:
-
- There is no such pairs, that has a difference of 9.
+ No subarray sums up to required number.
