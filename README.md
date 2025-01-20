@@ -1,28 +1,15 @@
 # myDSALearning
-##   Find Fibonacci - II
+##   Find Factorial
 Problem Description
 
-The Fibonacci numbers are the numbers in the following integer sequence.
+Write a program to find the factorial of the given number A using recursion.
 
-
-
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
-
-In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation:
-
-Fn = Fn-1 + Fn-2
-
-Given a number A, find and return the Ath Fibonacci Number using recursion.
-
-Given that F0 = 0 and F1 = 1.
-
-
-
+Note: The factorial of a number N is defined as the product of the numbers from 1 to N.
 
 
 Problem Constraints
 
-0 <= A <= 20
+0 <= A <= 12
 
 
 
@@ -34,7 +21,7 @@ First and only argument is an integer A.
 
 Output Format
 
-Return an integer denoting the Ath term of the sequence.
+Return an integer denoting the factorial of the number A.
 
 
 
@@ -42,27 +29,27 @@ Example Input
 
 Input 1:
 
- A = 2
+ A = 4
 Input 2:
 
- A = 9
+ A = 1
 
 
 Example Output
 
 Output 1:
 
- 1
+ 24
 Output 2:
 
- 34
+ 1
 
 
 Example Explanation
 
 Explanation 1:
 
- f(2) = f(1) + f(0) = 1
+ Factorial of 4 = 4 * 3 * 2 * 1 = 24
 Explanation 2:
 
- f(9) = f(8) + f(7) = 21 + 13  = 34
+ Factorial of 1 = 1
