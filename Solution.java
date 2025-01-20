@@ -1,20 +1,18 @@
-import java.util.*;
 public class Solution {
-    public int solve(ArrayList<Integer> A, int B) {
-         HashSet<Integer> set=new HashSet<>();
-        int N=A.size();
-        int count=0;
-        for(int i=0;i<N;i++){
-            if(set.contains(A.get(i)^B)) count++;
-            set.add(A.get(i));
+    public int findAthFibonacci(int A) {
+        if (A == 0) {
+            return 0;
         }
-        return count;
+        if (A == 1) {
+            return 1;
+        }
+        return findAthFibonacci(A - 1) + findAthFibonacci(A - 2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Solution().findAthFibonacci(4));
+        System.out.println(new Solution().findAthFibonacci(0));
     }
 }
 
-// 1 1 0
-// 0 1 1
-// 1 0 1
-// 0 0 0
-
-// A ^ C = B
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..

@@ -1,18 +1,20 @@
 # myDSALearning
-##  Pairs With Given Xor
-
+##   Find Fibonacci - II
 Problem Description
 
-Given an integer array A containing N distinct integers.
+The Fibonacci numbers are the numbers in the following integer sequence.
 
 
 
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
 
-Find the number of unique pairs of integers in the array whose XOR is equal to B.
+In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation:
 
-NOTE:
+Fn = Fn-1 + Fn-2
 
-Pair (a, b) and (b, a) is considered to be the same and should be counted once.
+Given a number A, find and return the Ath Fibonacci Number using recursion.
+
+Given that F0 = 0 and F1 = 1.
 
 
 
@@ -20,35 +22,19 @@ Pair (a, b) and (b, a) is considered to be the same and should be counted once.
 
 Problem Constraints
 
-1 <= N <= 105
-
-1 <= A[i], B <= 107
+0 <= A <= 20
 
 
 
 Input Format
 
-The first argument is an integer array A.
-
-
-
-
-
-
-
-The second argument is an integer B.
-
-
-
-
-
-
+First and only argument is an integer A.
 
 
 
 Output Format
 
-Return a single integer denoting the number of unique pairs of integers in the array A whose XOR is equal to B.
+Return an integer denoting the Ath term of the sequence.
 
 
 
@@ -56,12 +42,10 @@ Example Input
 
 Input 1:
 
- A = [5, 4, 10, 15, 7, 6]
- B = 5
+ A = 2
 Input 2:
 
- A = [3, 6, 8, 10, 15, 50]
- B = 5
+ A = 9
 
 
 Example Output
@@ -71,14 +55,14 @@ Output 1:
  1
 Output 2:
 
- 2
+ 34
 
 
 Example Explanation
 
 Explanation 1:
 
- (10 ^ 15) = 5
+ f(2) = f(1) + f(0) = 1
 Explanation 2:
 
- (3 ^ 6) = 5 and (10 ^ 15) = 5 
+ f(9) = f(8) + f(7) = 21 + 13  = 34
