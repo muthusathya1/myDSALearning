@@ -1,94 +1,18 @@
 # myDSALearning
-##   Is Dictionary?
+##   Valid Sudoku
 
-Problem Description
+Determine if a Sudoku is valid, according to: http://sudoku.com.au/TheRules.aspx
 
-Surprisingly, in an alien language, they also use English lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
-
-
-
-
-Given an array of words A of size N written in the alien language, and the order of the alphabet denoted by string B of size 26, return 1 if and only if the given words are sorted lexicographically in this alien language else, return 0.
+The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
 
 
 
+The input corresponding to the above configuration :
 
+["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"]
+A partially filled sudoku which is valid.
 
+Note:
 
-Problem Constraints
-
-1 <= N, length of each word <= 105
-
-Sum of the length of all words <= 2 * 106
-
-
-
-
-
-
-Input Format
-
-The first argument is a string array A of size N.
-
-
-
-
-The second argument is a string B of size 26, denoting the order.
-
-
-
-
-
-
-Output Format
-
-Return 1 if and only if the given words are sorted lexicographically in this alien language else, return 0.
-
-
-
-Example Input
-
-Input 1:
-
- A = ["hello", "scaler", "interviewbit"]
- B = "adhbcfegskjlponmirqtxwuvzy"
-Input 2:
-
- A = ["fine", "none", "bush"]
- B = "qwertyuiopasdfghjklzxcvbnm"
-
-
-Example Output
-
-Output 1:
-
- 1
-Output 2:
-
- 0
-
-
-Example Explanation
-
-Explanation 1:
-
- The order shown in string B is: h < s < i (adhbcfegskjlponmirqtxwuvzy) for the given words. 
- So, Return 1.
-Explanation 2:
-
- "none" should be present after "bush", Since b < n (qwertyuiopasdfghjklzxcvbnm). 
- So, Return 0.
-
-
-
-
-
-
-Example Explanation
-
-Explanation 1:
-
- [2, 3] sums up to 5.
-Explanation 2:
-
- No subarray sums up to required number.
+A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+Return 0 / 1 ( 0 for false, 1 for true ) for this problem
