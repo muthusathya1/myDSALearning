@@ -1,18 +1,84 @@
 # myDSALearning
-##   Valid Sudoku
+##  Pairs With Given Xor
 
-Determine if a Sudoku is valid, according to: http://sudoku.com.au/TheRules.aspx
+Problem Description
 
-The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+Given an integer array A containing N distinct integers.
 
 
 
-The input corresponding to the above configuration :
 
-["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"]
-A partially filled sudoku which is valid.
+Find the number of unique pairs of integers in the array whose XOR is equal to B.
 
-Note:
+NOTE:
 
-A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
-Return 0 / 1 ( 0 for false, 1 for true ) for this problem
+Pair (a, b) and (b, a) is considered to be the same and should be counted once.
+
+
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+
+1 <= A[i], B <= 107
+
+
+
+Input Format
+
+The first argument is an integer array A.
+
+
+
+
+
+
+
+The second argument is an integer B.
+
+
+
+
+
+
+
+
+
+Output Format
+
+Return a single integer denoting the number of unique pairs of integers in the array A whose XOR is equal to B.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [5, 4, 10, 15, 7, 6]
+ B = 5
+Input 2:
+
+ A = [3, 6, 8, 10, 15, 50]
+ B = 5
+
+
+Example Output
+
+Output 1:
+
+ 1
+Output 2:
+
+ 2
+
+
+Example Explanation
+
+Explanation 1:
+
+ (10 ^ 15) = 5
+Explanation 2:
+
+ (3 ^ 6) = 5 and (10 ^ 15) = 5 
