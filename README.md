@@ -1,27 +1,36 @@
 # myDSALearning
-##   Find Factorial
+##   Check Palindrome using Recursion
 Problem Description
 
-Write a program to find the factorial of the given number A using recursion.
+Write a recursive function that checks whether string A is a palindrome or Not.
+Return 1 if the string A is a palindrome, else return 0.
 
-Note: The factorial of a number N is defined as the product of the numbers from 1 to N.
+Note: A palindrome is a string that's the same when read forward and backward.
 
 
 Problem Constraints
 
-0 <= A <= 12
+1 <= |A| <= 50000
+
+
+
+
+String A consists only of lowercase letters.
+
+
+
 
 
 
 Input Format
 
-First and only argument is an integer A.
+The first and only argument is a string A.
 
 
 
 Output Format
 
-Return an integer denoting the factorial of the number A.
+Return 1 if the string A is a palindrome, else return 0.
 
 
 
@@ -29,27 +38,27 @@ Example Input
 
 Input 1:
 
- A = 4
+ A = "naman"
 Input 2:
 
- A = 1
+ A = "strings"
 
 
 Example Output
 
 Output 1:
 
- 24
+ 1
 Output 2:
 
- 1
+ 0
 
 
 Example Explanation
 
 Explanation 1:
 
- Factorial of 4 = 4 * 3 * 2 * 1 = 24
+ "naman" is a palindomic string, so return 1.
 Explanation 2:
 
- Factorial of 1 = 1
+ "strings" is not a palindrome, so return 0.
