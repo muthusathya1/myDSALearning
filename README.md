@@ -1,52 +1,51 @@
 # myDSALearning
-## Print reverse string
+## Sum of Digits
 
 Problem Description
 
-Write a recursive function that takes a string, S, as input and prints the characters of S in reverse order.
-
+Given a number A, we need to find the sum of its digits using recursion.
 
 
 Problem Constraints
 
-1 <= |s| <= 1000
-
+1 <= A <= 109
 
 
 Input Format
 
-First line of input contains a string S.
-
+The first and only argument is an integer A.
 
 
 Output Format
 
-Print the character of the string S in reverse order.
-
+Return an integer denoting the sum of digits of the number A.
 
 
 Example Input
 
 Input 1:
 
- scaleracademy
+ A = 46
 Input 2:
 
- cool
+ A = 11
 
 
 Example Output
 
 Output 1:
 
- ymedacarelacs
+ 10
 Output 2:
 
- looc
+ 2
 
 
 Example Explanation
 
-Explanation:
+Explanation 1:
 
- Print the reverse of the string in a single line.
+ Sum of digits of 46 = 4 + 6 = 10
+Explanation 2:
+
+ Sum of digits of 11 = 1 + 1 = 2
