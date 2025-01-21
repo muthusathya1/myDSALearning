@@ -1,30 +1,27 @@
 # myDSALearning
-##   Print A to 1 function
+## Print reverse string
 
 Problem Description
 
-You are given an integer A, print A to 1 using using recursion.
-
-Note :- After printing all the numbers from A to 1, print a new line.
+Write a recursive function that takes a string, S, as input and prints the characters of S in reverse order.
 
 
 
 Problem Constraints
 
-1 <= A <= 104
+1 <= |s| <= 1000
 
 
 
 Input Format
 
-First argument A is an integer.
+First line of input contains a string S.
 
 
 
 Output Format
 
-Print A space-separated integers A to 1.
-Note: There should be exactly one space after each integer. Print a new line after printing the A integers
+Print the character of the string S in reverse order.
 
 
 
@@ -32,27 +29,24 @@ Example Input
 
 Input 1:
 
-10
+ scaleracademy
 Input 2:
 
-5
+ cool
 
 
 Example Output
 
 Output 1:
 
-10 9 8 7 6 5 4 3 2 1 
+ ymedacarelacs
 Output 2:
 
-5 4 3 2 1 
+ looc
 
 
 Example Explanation
 
-Explanation 1:
+Explanation:
 
-Print 10 to 1 space separated integers.
-Explanation 2:
-
-Print 5 to 1 space separated integers.
+ Print the reverse of the string in a single line.
