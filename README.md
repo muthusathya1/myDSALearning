@@ -1,36 +1,29 @@
 # myDSALearning
-##   Check Palindrome using Recursion
+##    Print 1 to A function
 Problem Description
 
-Write a recursive function that checks whether string A is a palindrome or Not.
-Return 1 if the string A is a palindrome, else return 0.
+You are given an integer A, print 1 to A using using recursion.
 
-Note: A palindrome is a string that's the same when read forward and backward.
+Note :- After printing all the numbers from 1 to A, print a new line.
+
 
 
 Problem Constraints
 
-1 <= |A| <= 50000
-
-
-
-
-String A consists only of lowercase letters.
-
-
-
+1 <= A <= 104
 
 
 
 Input Format
 
-The first and only argument is a string A.
+First argument A is an integer.
 
 
 
 Output Format
 
-Return 1 if the string A is a palindrome, else return 0.
+Print A space-separated integers 1 to A.
+Note: There should be exactly one space after each integer. After printing all the integers, print a new line
 
 
 
@@ -38,27 +31,27 @@ Example Input
 
 Input 1:
 
- A = "naman"
+A = 10
 Input 2:
 
- A = "strings"
+A = 5
 
 
 Example Output
 
 Output 1:
 
- 1
+1 2 3 4 5 6 7 8 9 10 
 Output 2:
 
- 0
+1 2 3 4 5 
 
 
 Example Explanation
 
 Explanation 1:
 
- "naman" is a palindomic string, so return 1.
+Print 1 to 10 space separated integers.
 Explanation 2:
 
- "strings" is not a palindrome, so return 0.
+Print 1 to 5 space separated integers.
