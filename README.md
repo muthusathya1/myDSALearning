@@ -1,10 +1,11 @@
 # myDSALearning
-##    Print 1 to A function
+##   Print A to 1 function
+
 Problem Description
 
-You are given an integer A, print 1 to A using using recursion.
+You are given an integer A, print A to 1 using using recursion.
 
-Note :- After printing all the numbers from 1 to A, print a new line.
+Note :- After printing all the numbers from A to 1, print a new line.
 
 
 
@@ -22,8 +23,8 @@ First argument A is an integer.
 
 Output Format
 
-Print A space-separated integers 1 to A.
-Note: There should be exactly one space after each integer. After printing all the integers, print a new line
+Print A space-separated integers A to 1.
+Note: There should be exactly one space after each integer. Print a new line after printing the A integers
 
 
 
@@ -31,27 +32,27 @@ Example Input
 
 Input 1:
 
-A = 10
+10
 Input 2:
 
-A = 5
+5
 
 
 Example Output
 
 Output 1:
 
-1 2 3 4 5 6 7 8 9 10 
+10 9 8 7 6 5 4 3 2 1 
 Output 2:
 
-1 2 3 4 5 
+5 4 3 2 1 
 
 
 Example Explanation
 
 Explanation 1:
 
-Print 1 to 10 space separated integers.
+Print 10 to 1 space separated integers.
 Explanation 2:
 
-Print 1 to 5 space separated integers.
+Print 5 to 1 space separated integers.
