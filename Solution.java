@@ -20,3 +20,6 @@ public class Solution {
 
 // 3 ^ 5 = 243
 
+
+
+// fun(2,10)= fun(4,5)=4*fun(16,2)=4*fun(256,1)=4*256*1;
