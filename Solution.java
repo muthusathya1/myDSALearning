@@ -1,16 +1,17 @@
-
-// Method 2:
 public class Solution {
-    public int pow(int A, int B, int C) {
-        if(A == 0)
-            return 0;
-        if(B == 0)
-            return 1;
-        long ans = pow(A, B / 2, C);
-        ans = (ans * ans) % C;
-        if(B % 2 == 1)
-            ans = (ans * A);
-        ans = (ans + C) % C;
-        return (int)ans;
+    public int solve(int A) {
+       return isMagic(A)==1 ? 1:0;
     }
+       
+    private int isMagic(int A) {
+        if (A==0) {
+            return 0;
+        }
+        int sum=A%10+isMagic(A/10);
+        while (sum>9) {
+            sum=isMagic(sum);
+        }
+        return sum;
+    }  
+    
 }
