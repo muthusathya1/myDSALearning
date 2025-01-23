@@ -1,28 +1,31 @@
 # myDSALearning
-##   Is magic?
-Problem Description
+## Problem Description
 
-Given a number A, check if it is a magic number or not.
+On the first row, we write a 0. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.
 
-A number is said to be a magic number if the sum of its digits is calculated till a single digit recursively by adding the sum of the digits after every addition. If the single digit comes out to be 1, then the number is a magic number.
+Given row number A and index B, return the Bth indexed symbol in row A. (The values of B are 0-indexed.).
 
 
 
 Problem Constraints
 
-1 <= A <= 109
+1 <= A <= 20
+
+0 <= B < 2A - 1
 
 
 
 Input Format
 
-The first and only argument is an integer A.
+First argument is an integer A.
+
+Second argument is an integer B.
 
 
 
 Output Format
 
-Return an 1 if the given number is magic else return 0.
+Return an integer denoting the Bth indexed symbol in row A.
 
 
 
@@ -30,32 +33,34 @@ Example Input
 
 Input 1:
 
- A = 83557
+ A = 3
+ B = 0
 Input 2:
 
- A = 1291
+ A = 4
+ B = 4
 
 
 Example Output
 
 Output 1:
 
- 1
+ 0
 Output 2:
 
- 0
+ 1
 
 
 Example Explanation
 
 Explanation 1:
 
- Sum of digits of (83557) = 28
- Sum of digits of (28) = 10
- Sum of digits of (10) = 1. 
- Single digit is 1, so it's a magic number. Return 1.
+ Row 1: 0
+ Row 2: 01
+ Row 3: 0110
 Explanation 2:
 
- Sum of digits of (1291) = 13
- Sum of digits of (13) = 4
- Single digit is not 1, so it's not a magic number. Return 0.
+ Row 1: 0
+ Row 2: 01
+ Row 3: 0110
+ Row 4: 01101001
