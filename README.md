@@ -1,66 +1,49 @@
 # myDSALearning
 ## Problem Description
 
-On the first row, we write a 0. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.
+You are given A which is the head of a linked list. Print the linked list in space separated manner.
 
-Given row number A and index B, return the Bth indexed symbol in row A. (The values of B are 0-indexed.).
+Note : The last node value must also be succeeded by a space and after printing the entire list you should print a new line
 
 
 
 Problem Constraints
 
-1 <= A <= 20
+1 <= size of linked list <= 105
 
-0 <= B < 2A - 1
+1 <= value of nodes <= 109
 
 
 
 Input Format
 
-First argument is an integer A.
-
-Second argument is an integer B.
-
+The first argument A is the head of a linked list.
 
 
 Output Format
 
-Return an integer denoting the Bth indexed symbol in row A.
-
+You dont need to return anything
 
 
 Example Input
 
 Input 1:
-
- A = 3
- B = 0
+A = 1 -> 2 -> 3
 Input 2:
-
- A = 4
- B = 4
+A = 4 -> 3 -> 2 -> 1
 
 
 Example Output
 
 Output 1:
-
- 0
+1 2 3
 Output 2:
-
- 1
+4 3 2 1
 
 
 Example Explanation
 
-Explanation 1:
-
- Row 1: 0
- Row 2: 01
- Row 3: 0110
-Explanation 2:
-
- Row 1: 0
- Row 2: 01
- Row 3: 0110
- Row 4: 01101001
+For Input 1:
+We print the given linked list
+For Input 2:
+We print the given linked list
