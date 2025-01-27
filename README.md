@@ -1,49 +1,25 @@
 # myDSALearning
+## Class Matrix
 ## Problem Description
 
-You are given A which is the head of a linked list. Print the linked list in space separated manner.
+Construct a class called Matrix which stores a 2D Array. It should store
 
-Note : The last node value must also be succeeded by a space and after printing the entire list you should print a new line
+The number of rows
 
+The number of columns
 
+The 2D Array itself
 
-Problem Constraints
+Implement the following functionalities inside this class :-
 
-1 <= size of linked list <= 105
+input() -> Reads the input from the user. This method should read the input from the user and populate the entire array. Each row will be in a new line and all the elements in a row will be space-separated.
 
-1 <= value of nodes <= 109
+add(Matrix) -> Returns the sum of two matrices. Assume the matrices provided have the same dimensions.
 
+subtract(Matrix) -> Returns the sum of two matrices. Assume the matrices provided have the same dimensions.
 
+transpose() -> Returns a new matrix containing the transpose of the given original matrix.
 
-Input Format
+print() -> prints the entire matrix row by row. Each row will be in a new line and values in each row should be separated by a single space.
 
-The first argument A is the head of a linked list.
-
-
-Output Format
-
-You dont need to return anything
-
-
-Example Input
-
-Input 1:
-A = 1 -> 2 -> 3
-Input 2:
-A = 4 -> 3 -> 2 -> 1
-
-
-Example Output
-
-Output 1:
-1 2 3
-Output 2:
-4 3 2 1
-
-
-Example Explanation
-
-For Input 1:
-We print the given linked list
-For Input 2:
-We print the given linked list
+You may define any properties in the class as you see appropriate.
