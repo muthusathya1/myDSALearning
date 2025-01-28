@@ -1,25 +1,55 @@
 # myDSALearning
-## Class Matrix
+## Max Sum Contiguous Subarray
 ## Problem Description
 
-Construct a class called Matrix which stores a 2D Array. It should store
+Find the maximum sum of contiguous non-empty subarray within an array A of length N.
 
-The number of rows
 
-The number of columns
 
-The 2D Array itself
+Problem Constraints
 
-Implement the following functionalities inside this class :-
+1 <= N <= 1e6
+-1000 <= A[i] <= 1000
 
-input() -> Reads the input from the user. This method should read the input from the user and populate the entire array. Each row will be in a new line and all the elements in a row will be space-separated.
 
-add(Matrix) -> Returns the sum of two matrices. Assume the matrices provided have the same dimensions.
 
-subtract(Matrix) -> Returns the sum of two matrices. Assume the matrices provided have the same dimensions.
+Input Format
 
-transpose() -> Returns a new matrix containing the transpose of the given original matrix.
+The first and the only argument contains an integer array, A.
 
-print() -> prints the entire matrix row by row. Each row will be in a new line and values in each row should be separated by a single space.
 
-You may define any properties in the class as you see appropriate.
+
+Output Format
+
+Return an integer representing the maximum possible sum of the contiguous subarray.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [1, 2, 3, 4, -10] 
+Input 2:
+
+ A = [-2, 1, -3, 4, -1, 2, 1, -5, 4] 
+
+
+Example Output
+
+Output 1:
+
+ 10 
+Output 2:
+
+ 6 
+
+
+Example Explanation
+
+Explanation 1:
+
+ The subarray [1, 2, 3, 4] has the maximum possible sum of 10. 
+Explanation 2:
+
+ The subarray [4,-1,2,1] has the maximum possible sum of 6. 
