@@ -1,19 +1,16 @@
+
 public class Solution {
-    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
-    public int maxSubArray(final int[] A) {
-		if (A.length==1) {
-			return A[0];
-		}
-		int sum=0;
-		int maxSum=A[0];
-		for (int i = 0; i < A.length; i++) {
-			sum+=A[i];
-			
-			maxSum=Math.max(sum, maxSum);
-		if (sum<0) {
-				sum=0;
-			}
+    public int[] solve(int A, int[][] B) {
+        int[] beggars=new int[A];
+        for (int i = 0; i < B.length; i++) {
+            beggars[B[i][0]-1]+=B[i][2];
+            if(B[i][1]<A) beggars[B[i][1]]-=B[i][2];
         }
-		return maxSum;
+        for (int i = 1; i < beggars.length; i++) {
+            beggars[i]=beggars[i]+beggars[i-1];
+        }
+        return beggars;
     }
 }
+
+
