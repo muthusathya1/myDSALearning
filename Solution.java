@@ -1,30 +1,22 @@
 public class Solution {
-    public int solve(int[] A, int B) {
-        int count = 0;
+    public int solve(int[][] A) {
+        int j=A[0].length-1;
+        int ones=0;
+        int maxOnes=0;
+        int maxRow=-1;
         for (int i = 0; i < A.length; i++) {
-            if (A[i] <= B) {
-                count++;
+            while (j>=0 && A[i][j]==1) {
+                ones++;
+                j--;
+            }
+            if(j<0){
+                return i;
+            }
+            if (ones>maxOnes) {
+                maxOnes=ones;
+                maxRow=i;
             }
         }
-
-        int swaps = 0;
-        for (int i = 0; i < count; i++) {
-            if (A[i] > B) {
-                swaps++;
-            }
-        }
-        int minSwaps = swaps;
-        int drop = 0;
-        for (int i = count; i < A.length; i++) {
-            if (A[drop] > B) {
-                swaps--;
-            }
-            if (A[i] > B) {
-                swaps++;
-            }
-            drop++;
-            minSwaps = Math.min(swaps, minSwaps);
-        }
-        return minSwaps;
+        return maxRow;
     }
 }
