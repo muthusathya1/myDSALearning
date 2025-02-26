@@ -1,35 +1,31 @@
 # myDSALearning
-## Row with maximum number of ones
+## Merge Intervals
+
 Problem Description
 
-Given a binary sorted matrix A of size N x N. Find the row with the maximum number of 1.
+You have a set of non-overlapping intervals. You are given a new interval [start, end], insert this new interval into the set of intervals (merge if necessary).
 
-NOTE:
+You may assume that the intervals were initially sorted according to their start times.
 
-If two rows have the maximum number of 1 then return the row which has a lower index.
-Rows are numbered from top to bottom and columns are numbered from left to right.
-Assume 0-based indexing.
-Assume each row to be sorted by values.
-Expected time complexity is O(rows + columns).
 
 
 Problem Constraints
 
-1 <= N <= 1000
-
-0 <= A[i] <= 1
+0 <= |intervals| <= 105
 
 
 
 Input Format
 
-The only argument given is the integer matrix A.
+First argument is the vector of intervals
+
+second argument is the new interval to be merged
 
 
 
 Output Format
 
-Return the row with the maximum number of 1.
+Return the vector of intervals after merging
 
 
 
@@ -37,32 +33,27 @@ Example Input
 
 Input 1:
 
- A = [   [0, 1, 1]
-         [0, 0, 1]
-         [0, 1, 1]   ]
+Given intervals [1, 3], [6, 9] insert and merge [2, 5] .
 Input 2:
 
- A = [   [0, 0, 0, 0]
-         [0, 0, 0, 1]
-         [0, 0, 1, 1]
-         [0, 1, 1, 1]    ]
+Given intervals [1, 3], [6, 9] insert and merge [2, 6] .
 
 
 Example Output
 
 Output 1:
 
- 0
+ [ [1, 5], [6, 9] ]
 Output 2:
 
- 3
+ [ [1, 9] ]
 
 
 Example Explanation
 
 Explanation 1:
 
- Row 0 has maximum number of 1s.
+(2,5) does not completely merge the given intervals
 Explanation 2:
 
- Row 3 has maximum number of 1s.
+(2,6) completely merges the given intervals
