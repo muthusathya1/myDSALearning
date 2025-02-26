@@ -1,26 +1,38 @@
 # myDSALearning
-## Merge Overlapping Intervals
+## First Missing Integer
 Problem Description
 
-Given a collection of intervals, merge all overlapping intervals.
+Given an unsorted integer array, A of size N. Find the first missing positive integer.
+
+
+
+
+
+Note: Your algorithm should run in O(n) time and use constant space.
+
+
+
+
 
 
 
 Problem Constraints
 
-    1 <= Total number of intervals <= 100000.
+    1 <= N <= 1000000
+
+    -109 <= A[i] <= 109
 
 
 
 Input Format
 
-    First argument is a list of intervals.
+    First argument is an integer array A.
 
 
 
 Output Format
 
-    Return the sorted list of intervals after merging all the overlapping intervals.
+    Return an integer denoting the first missing positive integer.
 
 
 
@@ -28,20 +40,47 @@ Example Input
 
 Input 1:
 
-    [1,3],[2,6],[8,10],[15,18]
+    [1, 2, 0]
+Input 2:
+
+    [3, 4, -1, 1]
+Input 3:
+
+    [-8, -7, -6]
+
+
+
+
 
 
 Example Output
 
 Output 1:
 
-    [1,6],[8,10],[15,18]
+    3
+Output 2:
+
+    2
+Output 3:
+
+    1
+
+
+
+
 
 
 Example Explanation
 
 Explanation 1:
 
-    Merge intervals [1,3] and [2,6] -> [1,6].
-    so, the required answer after merging is [1,6],[8,10],[15,18].
-    No more overlapping intervals present.
+A = [1, 2, 0]
+First positive integer missing from the array is 3.
+Explanation 2:
+
+A = [3, 4, -1, 1]
+First positive integer missing from the array is 2.
+Explanation 3:
+
+A = [-8, -7, -6]
+First positive integer missing from the array is 1.
