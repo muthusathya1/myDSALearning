@@ -1,38 +1,33 @@
 # myDSALearning
-## First Missing Integer
+## Rain Water Trapped
 Problem Description
 
-Given an unsorted integer array, A of size N. Find the first missing positive integer.
+Imagine a histogram where the bars' heights are given by the array A. Each bar is of uniform width, which is 1 unit. When it rains, water will accumulate in the valleys between the bars.
 
+Your task is to calculate the total amount of water that can be trapped in these valleys.
 
+Example:
 
+The Array A = [5, 4, 1, 4, 3, 2, 7] is visualized as below. The total amount of rain water trapped in A is 11.
 
-
-Note: Your algorithm should run in O(n) time and use constant space.
-
-
-
-
-
-
+![Alt text](./rain_1.png)
 
 Problem Constraints
 
-    1 <= N <= 1000000
-
-    -109 <= A[i] <= 109
+1 <= |A| <= 105
+0 <= A[i] <= 105
 
 
 
 Input Format
 
-    First argument is an integer array A.
+First and only argument is the Integer Array, A.
 
 
 
 Output Format
 
-    Return an integer denoting the first missing positive integer.
+Return an Integer, denoting the total amount of water that can be trapped in these valleys
 
 
 
@@ -40,47 +35,30 @@ Example Input
 
 Input 1:
 
-    [1, 2, 0]
+ A = [0, 1, 0, 2]
 Input 2:
 
-    [3, 4, -1, 1]
-Input 3:
-
-    [-8, -7, -6]
-
-
-
-
+A = [1, 2]
 
 
 Example Output
 
 Output 1:
 
-    3
+1
 Output 2:
 
-    2
-Output 3:
-
-    1
-
-
-
-
+0
 
 
 Example Explanation
 
 Explanation 1:
 
-A = [1, 2, 0]
-First positive integer missing from the array is 3.
+1 unit is trapped on top of the 3rd element.
+
+![Alt text](./rain_water.png)
+
 Explanation 2:
 
-A = [3, 4, -1, 1]
-First positive integer missing from the array is 2.
-Explanation 3:
-
-A = [-8, -7, -6]
-First positive integer missing from the array is 1.
+No water is trapped.
