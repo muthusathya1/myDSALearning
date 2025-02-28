@@ -1,33 +1,38 @@
 # myDSALearning
-## Rain Water Trapped
+##  Next Permutation
 Problem Description
 
-Imagine a histogram where the bars' heights are given by the array A. Each bar is of uniform width, which is 1 unit. When it rains, water will accumulate in the valleys between the bars.
+Implement the next permutation, which rearranges numbers into the numerically next greater permutation of numbers for a given array A of size N.
 
-Your task is to calculate the total amount of water that can be trapped in these valleys.
 
-Example:
 
-The Array A = [5, 4, 1, 4, 3, 2, 7] is visualized as below. The total amount of rain water trapped in A is 11.
+If such arrangement is not possible, it must be rearranged as the lowest possible order, i.e., sorted in ascending order.
 
-![Alt text](./rain_1.png)
+NOTE:
+
+
+
+The replacement must be in-place, do not allocate extra memory.
+DO NOT USE LIBRARY FUNCTION FOR NEXT PERMUTATION. Use of Library functions will disqualify your submission retroactively and will give you penalty points.
+
 
 Problem Constraints
 
-1 <= |A| <= 105
-0 <= A[i] <= 105
+    1 <= N <= 5 * 105
+
+    1 <= A[i] <= 109
 
 
 
 Input Format
 
-First and only argument is the Integer Array, A.
+    The first and the only argument of input has an array of integers, A.
 
 
 
 Output Format
 
-Return an Integer, denoting the total amount of water that can be trapped in these valleys
+    Return an array of integers, representing the next permutation of the given array.
 
 
 
@@ -35,30 +40,28 @@ Example Input
 
 Input 1:
 
- A = [0, 1, 0, 2]
+    A = [1, 2, 3]
 Input 2:
 
-A = [1, 2]
+    A = [3, 2, 1]
 
 
 Example Output
 
 Output 1:
 
-1
+    [1, 3, 2]
 Output 2:
 
-0
+    [1, 2, 3]
 
 
 Example Explanation
 
 Explanation 1:
 
-1 unit is trapped on top of the 3rd element.
-
-![Alt text](./rain_water.png)
-
+    Next permutaion of [1, 2, 3] will be [1, 3, 2].
 Explanation 2:
 
-No water is trapped.
+    No arrangement is possible such that the number are arranged into the numerically next greater permutation of numbers.
+    So will rearranges it in the lowest possible order.

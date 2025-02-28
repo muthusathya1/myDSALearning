@@ -1,29 +1,27 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
-    // DO NOT MODIFY THE LIST. IT IS READ ONLY
-    public int trap(final List<Integer> A) {
-       ArrayList<Integer> highestFromLeft=new ArrayList<>();
-       ArrayList<Integer> highestFromRight=new ArrayList<>();
-        int maxLeft=A.get(0);
-        highestFromLeft.add(maxLeft);
-       for (int i = 1; i < A.size(); i++) {
-        maxLeft=Math.max(maxLeft, A.get(i));
-        highestFromLeft.add(maxLeft);
-       }
-       int maxRight=A.get(A.size()-1);
-       highestFromRight.add(maxRight);
-       for (int i = A.size()-2; i >=0; i--) {
-        maxRight=Math.max(maxRight, A.get(i));
-        highestFromRight.add(maxRight);
-       }
-       Collections.reverse(highestFromRight);
-       int rainWaterTrapped=0;
-       for (int i = 1; i < A.size()-1; i++) {
-        rainWaterTrapped+=Math.min(highestFromLeft.get(i), highestFromRight.get(i))-A.get(i);
-       }
-       return rainWaterTrapped;
-    }
+    public ArrayList<Integer> nextPermutation(ArrayList<Integer> A) {
+        int n=A.size();
+        int i=n-2;
+        while(i>=0 && A.get(i)>=A.get(i+1)){
+            i--;
+        }
+        if (i>=0) {
+            int j=n-1;
+            while (A.get(j)<=A.get(i)) {
+                j--;
+            }
+            Collections.swap(A, i, j);
+        }
+        reverse(A,i+1,n-1);
+                return A;
+            }
+        
+            private void reverse(ArrayList<Integer> A, int start, int end) {
+                while (start<end) {
+                    Collections.swap(A, start++, end--);
+                    
+                }
+            }
 }
