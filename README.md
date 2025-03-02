@@ -1,55 +1,62 @@
 # myDSALearning
-## Maximum AND Pair
+## Single Number II
 
 Problem Description
 
-Given an array A. For every pair of indices i and j (i != j), find the maximum A[i] & A[j].
+Given an array of integers, every element appears thrice except for one, which occurs once.
+
+Find that element that does not appear thrice.
+
+NOTE: Your algorithm should have a linear runtime complexity.
+
+Could you implement it without using extra memory?
+
+
 
 
 Problem Constraints
 
-    1 <= len(A) <= 105
-    1 <= A[i] <= 109
+    2 <= A <= 5*106
+
+    0 <= A <= INTMAX
+
 
 
 Input Format
 
-    The first argument is an integer array A.
+    First and only argument of input contains an integer array A.
+
 
 
 Output Format
 
-    Return a single integer that is the maximum A[i] & A[j].
+    Return a single integer.
+
 
 
 Example Input
 
-Input 1:-
+Input 1:
 
-    A = [53, 39, 88]
-Input 2:-
+    A = [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]
+Input 2:
 
-    A = [38, 44, 84, 12] 
+    A = [0, 0, 0, 1]
 
 
 Example Output
 
-Output 1:-
+Output 1:
 
-    37
-Output 2:-
+    4
+Output 2:
 
-    36
+    1
 
 
 Example Explanation
 
-Explanation 1:-
+Explanation 1:
 
-    53 & 39 = 37
-    39 & 88 = 0
-    53 & 88 = 16
-    Maximum among all these pairs is 37
-Explanation 2:-
-
-    Maximum bitwise and among all pairs is (38, 44) = 36
+    4 occurs exactly once in Input 1.
+    1 occurs exactly once in Input 2.

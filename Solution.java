@@ -1,36 +1,33 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Solution {
-    public int solve(ArrayList<Integer> A) {
-        int N = A.size();
-        for (int position = 31; position >= 0; position--) {
-            int npositionSet = 0;
-            for (int i = 0; i < N; i++) {
-                if (isSet(A.get(i), position)) {
-                    npositionSet++;
-                }
-                if (npositionSet > 1) {
-                    for (int j = 0; j < N; j++) {
-                        if (!isSet(A.get(j), position)) {
-                            A.set(j, 0);
-                        }
-                    }
-                    break;
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public int singleNumber(final List<Integer> A) {
+        int N=A.size();
+        int ans=0;
+        for (int i = 31; i >=0; i--) {
+            int setBits=0;
+            for (Integer integer : A) {
+                if (isSetBit(integer,i)) {
+                    setBits++;
                 }
             }
-        }
-
-        int ans = Integer.MAX_VALUE;
-        for (int i = 0; i < N; i++) {
-            if (A.get(i) != 0) {
-                ans = ans & A.get(i);
+            if (setBits%3!=0) {
+                ans+=Math.pow(2, i);
             }
         }
         return ans;
-
+        
     }
-
-    private boolean isSet(int integer, int position) {
-        return (integer & 1 << position) != 0 ? true : false;
+    boolean isSetBit(int number, int position){
+        if ((number&1<<position)!=0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        Solution solution =new Solution();
+        System.out.println(solution.singleNumber(new ArrayList<>(Arrays.asList(1, 2, 4, 3, 3, 2, 2, 3, 1, 1))));
     }
 }
