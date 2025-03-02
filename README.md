@@ -1,62 +1,49 @@
 # myDSALearning
-## Single Number II
+## Strange Equality
 
 Problem Description
 
-Given an array of integers, every element appears thrice except for one, which occurs once.
+Given an integer A.
+Two numbers, X and Y, are defined as follows:
 
-Find that element that does not appear thrice.
+X is the greatest number smaller than A such that the XOR sum of X and A is the same as the sum of X and A.
+Y is the smallest number greater than A, such that the XOR sum of Y and A is the same as the sum of Y and A.
+Find and return the XOR of X and Y.
 
-NOTE: Your algorithm should have a linear runtime complexity.
+NOTE 1: XOR of X and Y is defined as X ^ Y where '^' is the BITWISE XOR operator.
 
-Could you implement it without using extra memory?
-
+NOTE 2: Your code will be run against a maximum of 100000 Test Cases.
 
 
 
 Problem Constraints
 
-    2 <= A <= 5*106
-
-    0 <= A <= INTMAX
+1 <= A <= 109
 
 
 
 Input Format
 
-    First and only argument of input contains an integer array A.
+First and only argument is an integer A.
 
 
 
 Output Format
 
-    Return a single integer.
+Return an integer denoting the XOR of X and Y.
 
 
 
 Example Input
 
-Input 1:
-
-    A = [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]
-Input 2:
-
-    A = [0, 0, 0, 1]
+A = 5
 
 
 Example Output
 
-Output 1:
-
-    4
-Output 2:
-
-    1
+10
 
 
 Example Explanation
 
-Explanation 1:
-
-    4 occurs exactly once in Input 1.
-    1 occurs exactly once in Input 2.
+The value of X will be 2 and the value of Y will be 8. The XOR of 2 and 8 is 10.
