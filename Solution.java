@@ -1,16 +1,13 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Solution {
-    public int solve(int A) {
-        int num=A;
-        int p=0;
-        int ans=0;
-        while(num>0){
-            if(num%2==0){
-            ans+=Math.pow(2,p);
-            }
-            p++;
-            num/=2;
+    public int findMinXor(ArrayList<Integer> A) {
+        Collections.sort(A);
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < A.size() - 1; i++) {
+            min = Math.min(min, A.get(i) ^ A.get(i + 1));
         }
-        ans+=Math.pow(2,p);
-        return ans;
+        return min;
     }
 }
