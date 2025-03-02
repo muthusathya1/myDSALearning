@@ -1,27 +1,30 @@
 # myDSALearning
-##  Number of Digit One
+##   Single Number III
 
 Problem Description
 
-Given an integer A, find and return the total number of digit 1 appearing in all non-negative integers less than or equal to A.
+Given an array of positive integers A, two integers appear only once, and all the other integers appear twice.
+Find the two integers that appear only once.
 
+Note: Return the two numbers in ascending order.
 
 
 Problem Constraints
 
-    0 <= A <= 109
+    2 <= |A| <= 100000
+    1 <= A[i] <= 109
 
 
 
 Input Format
 
-    The only argument given is the integer A.
+The first argument is an array of integers of size N.
 
 
 
 Output Format
 
-    Return the total number of digit 1 appearing in all non-negative integers less than or equal to A.
+Return an array of two integers that appear only once.
 
 
 
@@ -29,27 +32,27 @@ Example Input
 
 Input 1:
 
-    A = 10
+    A = [1, 2, 3, 1, 2, 4]
 Input 2:
 
-    A = 11
+    A = [1, 2]
 
 
 Example Output
 
 Output 1:
 
-    2
+    [3, 4]
 Output 2:
 
-    4
+    [1, 2]
 
 
 Example Explanation
 
 Explanation 1:
 
-    Digit 1 appears in 1 and 10 only and appears one time in each. So the answer is 2.
+    3 and 4 appear only once.
 Explanation 2:
 
-    Digit 1 appears in 1(1 time) , 10(1 time) and 11(2 times) only. So the answer is 4.
+    1 and 2 appear only once.
