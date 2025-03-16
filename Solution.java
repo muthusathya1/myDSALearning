@@ -7,7 +7,7 @@ public class Solution {
 
     }
 
-    private static void bubbleSort(int[] array) {
+    public static void bubbleSort(int[] array) {
         int loops = 0;
         for (int i = 0; i < array.length; i++) {
 
