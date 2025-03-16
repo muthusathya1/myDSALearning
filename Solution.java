@@ -1,20 +1,33 @@
-class Solution {
-    public long countPairs(int[] arr, int k) {
-        int N=arr.length;
-        long[] freq=new long[k];
-        long mod=1000000007;
-        for (int i = 0; i < N; i++) {
-           int remainder=arr[i]%k;
-           freq[remainder]=freq[remainder]+1;
-        }
-        long count=0;
-        for (int i = 0; i < freq.length; i++) {
-            if (i==0 || (i==k-i)) {
-                count+=(freq[i]*(freq[i]-1)/2)%mod;
-            }else{
-                count+=freq[i]*freq[k-i]%mod;
-            }
-        }
-        return (int) (count%mod);
+import java.util.Arrays;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        bubbleSort(new int[] { 7, 3, 9, 12, 11 });
+
     }
+
+    private static void bubbleSort(int[] array) {
+        int loops = 0;
+        for (int i = 0; i < array.length; i++) {
+
+            boolean swapped = false;
+            System.out.println();
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+            loops++;
+            System.out.println(loops);
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
 }
