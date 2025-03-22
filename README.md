@@ -1,32 +1,33 @@
 # myDSALearning
-##  Pair Sum divisible by M
+##  Very Large Power
 Problem Description
 
-Given an array of integers A and an integer B, find and return the number of pairs in A whose sum is divisible by B.
+Given two Integers A, B. You have to calculate (A ^ (B!)) % (1e9 + 7).
 
-Since the answer may be large, return the answer modulo (109 + 7).
+    "^" means power,
+    "%" means mod, and
+    "!" means factorial.
 
 Note: Ensure to handle integer overflow when performing the calculations.
 
 
 Problem Constraints
 
-    1 <= length of the array <= 100000
-    1 <= A[i] <= 109
-    1 <= B <= 106
+    1 <= A, B <= 5e5
 
 
 
 Input Format
 
-    The first argument given is the integer array A.
-    The second argument given is the integer B.
+    First argument is the integer A
+
+    Second argument is the integer B
 
 
 
 Output Format
 
-    Return the total number of pairs for which the sum is divisible by B modulo (109 + 7).
+    Return one integer, the answer to the problem
 
 
 
@@ -34,30 +35,29 @@ Example Input
 
 Input 1:
 
-    A = [1, 2, 3, 4, 5]
-    B = 2
+    A = 1
+    B = 1
 Input 2:
 
-    A = [5, 17, 100, 11]
-    B = 28
+    A = 2
+    B = 2
 
 
 Example Output
 
 Output 1:
 
-    4
+    1
 Output 2:
 
-    1
+    4
 
 
 Example Explanation
 
 Explanation 1:
 
-    All pairs which are divisible by 2 are (1,3), (1,5), (2,4), (3,5). 
-    So total 4 pairs.
+    1! = 1. Hence 1^1 = 1.
 Explanation 2:
 
-    There is only one pair which is divisible by 28 is (17, 11)
+    2! = 2. Hence 2^2 = 4.
