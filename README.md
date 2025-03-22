@@ -1,28 +1,28 @@
 # myDSALearning
-##  A, B and Modulo
+##  Mod Sum
 Problem Description
 
-Given two integers A and B, find the greatest possible positive integer M, such that A % M = B % M.
+Given an array of integers A, calculate the sum of A [ i ] % A [ j ] for all possible i, j pairs. Return sum % (10^9 + 7) as an output.
 
 
 
 Problem Constraints
 
-1 <= A, B <= 109
-A != B
+1 <= length of the array A <= 10^5
+
+1 <= A[i] <= 10^3
 
 
 
 Input Format
 
-The first argument is an integer A.
-The second argument is an integer B.
+The only argument given is the integer array A.
 
 
 
 Output Format
 
-Return an integer denoting the greatest possible positive M.
+Return a single integer denoting sum % (10^9 + 7).
 
 
 
@@ -30,31 +30,24 @@ Example Input
 
 Input 1:
 
-A = 1
-B = 2
+ A = [1, 2, 3]
 Input 2:
 
-A = 5
-B = 10
+ A = [17, 100, 11]
 
 
 Example Output
 
 Output 1:
 
-1
+ 5
 Output 2:
 
-5
+ 61
 
 
 Example Explanation
 
 Explanation 1:
 
-1 is the largest value of M such that A % M == B % M.
-Explanation 2:
-
-For M = 5, A % M = 0 and B % M = 0.
-
-No value greater than M = 5, satisfies the condition.
+ (1 % 1) + (1 % 2) + (1 % 3) + (2 % 1) + (2 % 2) + (2 % 3) + (3 % 1) + (3 % 2) + (3 % 3) = 5
