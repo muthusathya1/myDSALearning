@@ -1,18 +1,19 @@
 public class Solution {
-    public int solve(int A, int B) {
-        return powerOf(A, B - 2, B);
-    }
+    public int solve(int[] A, int B) {
+        long mod = 1_00_00_00_00_7L;
+        long[] freq = new long[B];
+        for (int i = 0; i < A.length; i++) {
+            freq[A[i] % B]++;
+        }
+        long count = 0;
+        for (int i = 0; i <=B/2; i++) {
+            if (i == 0 || i == B - i) {
+                count = ((count % mod) + ((((freq[i] % mod) * ((freq[i] - 1) % mod)) / 2) % mod)) % mod;
+            } else {
+                count = ((count % mod) + (((freq[i] % mod) * (freq[B - i] % mod)) % mod)) % mod;
+            }
+        }
+        return (int) (count % mod);
 
-    private int powerOf(int A, int power, int M) {
-        if (power==0) {
-            return 1;
-        }
-        long P=powerOf(A, power/2, M)%M;
-        long X=(P*P)%M;
-        if (power%2==0) {
-            return (int) (X%M);            
-        }else{
-            return (int) (((A%M)*(X%M))%M);
-        }
     }
 }

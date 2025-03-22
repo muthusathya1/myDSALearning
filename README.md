@@ -1,32 +1,32 @@
 # myDSALearning
-##  Prime Modulo Inverse
-
+##  Pair Sum divisible by M
 Problem Description
 
-Given two integers A and B. Find the value of A-1 mod B where B is a prime number and gcd(A, B) = 1.
+Given an array of integers A and an integer B, find and return the number of pairs in A whose sum is divisible by B.
 
-A-1 mod B is also known as modular multiplicative inverse of A under modulo B.
+Since the answer may be large, return the answer modulo (109 + 7).
 
+Note: Ensure to handle integer overflow when performing the calculations.
 
 
 Problem Constraints
 
-    1 <= A <= 109
-    1<= B <= 109
-    B is a prime number
+    1 <= length of the array <= 100000
+    1 <= A[i] <= 109
+    1 <= B <= 106
 
 
 
 Input Format
 
-    First argument is an integer A.
-    Second argument is an integer B.
+    The first argument given is the integer array A.
+    The second argument given is the integer B.
 
 
 
 Output Format
 
-    Return an integer denoting the modulor inverse
+    Return the total number of pairs for which the sum is divisible by B modulo (109 + 7).
 
 
 
@@ -34,30 +34,30 @@ Example Input
 
 Input 1:
 
-    A = 3
-    B = 5
+    A = [1, 2, 3, 4, 5]
+    B = 2
 Input 2:
 
-    A = 6
-    B = 23
+    A = [5, 17, 100, 11]
+    B = 28
 
 
 Example Output
 
 Output 1:
 
-    2
+    4
 Output 2:
 
-    4
+    1
 
 
 Example Explanation
 
 Explanation 1:
 
-    Let's say A-1 mod B = X, then (A * X) % B = 1.
-    3 * 2 = 6, 6 % 5 = 1.
+    All pairs which are divisible by 2 are (1,3), (1,5), (2,4), (3,5). 
+    So total 4 pairs.
 Explanation 2:
 
-    Similarly, (6 * 4) % 23 = 1.
+    There is only one pair which is divisible by 28 is (17, 11)
