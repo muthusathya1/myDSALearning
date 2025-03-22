@@ -1,33 +1,28 @@
 # myDSALearning
-##  Very Large Power
+##  A, B and Modulo
 Problem Description
 
-Given two Integers A, B. You have to calculate (A ^ (B!)) % (1e9 + 7).
+Given two integers A and B, find the greatest possible positive integer M, such that A % M = B % M.
 
-    "^" means power,
-    "%" means mod, and
-    "!" means factorial.
-
-Note: Ensure to handle integer overflow when performing the calculations.
 
 
 Problem Constraints
 
-    1 <= A, B <= 5e5
+1 <= A, B <= 109
+A != B
 
 
 
 Input Format
 
-    First argument is the integer A
-
-    Second argument is the integer B
+The first argument is an integer A.
+The second argument is an integer B.
 
 
 
 Output Format
 
-    Return one integer, the answer to the problem
+Return an integer denoting the greatest possible positive M.
 
 
 
@@ -35,29 +30,31 @@ Example Input
 
 Input 1:
 
-    A = 1
-    B = 1
+A = 1
+B = 2
 Input 2:
 
-    A = 2
-    B = 2
+A = 5
+B = 10
 
 
 Example Output
 
 Output 1:
 
-    1
+1
 Output 2:
 
-    4
+5
 
 
 Example Explanation
 
 Explanation 1:
 
-    1! = 1. Hence 1^1 = 1.
+1 is the largest value of M such that A % M == B % M.
 Explanation 2:
 
-    2! = 2. Hence 2^2 = 4.
+For M = 5, A % M = 0 and B % M = 0.
+
+No value greater than M = 5, satisfies the condition.
