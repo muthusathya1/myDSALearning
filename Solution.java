@@ -1,18 +1,53 @@
-public class Solution {
-    public int solve(int[] A) {
-        long[] freq=new long[1001];
-        for (int i = 0; i < A.length; i++) {
-            freq[A[i]]++;
-        }
-        int mod=1000000007;
+class Solution {
+    private static int SIZE = 9;
+    private boolean[][] row = new boolean[SIZE][SIZE];
+    private boolean[][] column = new boolean[SIZE][SIZE];
+    private boolean[][] box = new boolean[SIZE][SIZE];
 
-        long sum=0;
-
-        for (int i = 1; i < freq.length; i++) {
-            for (int j = 1; j < freq.length; j++) {
-                sum= (sum%mod + ( (i%j)%mod  *  ( (freq[i]%mod) * (freq[j]%mod)  )%mod ) %mod ) %mod;
+    public void solveSudoku(char[][] board) {
+        for (int r = 0; r < SIZE; r++) {
+            for (int c = 0; c < SIZE; c++) {
+                if (board[r][c] != '.') {
+                    int num = board[r][c] - '1';
+                    row[r][num] = true;
+                    column[c][num] = true;
+                    box[getBoxIndex(r, c)][num] = true;
+                }
             }
         }
-        return (int) (sum%mod);
+        solveBoard(board, 0, 0); // Back Tracking from first position
+    }
+
+    private boolean solveBoard(char[][] board, int r, int c) {
+        if (c == SIZE) {
+            return solveBoard(board, ++r, 0); // Start from next row and first column
+        }
+        if (r == SIZE) {
+            return true; // Finished the board;
+        }
+        if (board[r][c] != '.') {
+            return solveBoard(board, r, ++c);
+        } else {
+            for (int i = 0; i < 9; i++) {  //Iterating thru numbers
+                if(row[r][i]!=true && column[c][i]!=true && box[getBoxIndex(r,c)][i]!=true){ //If not present already
+                    board[r][c]=(char) (i + '1');
+                    row[r][i]=true;
+                    column[c][i]=true;
+                    box[getBoxIndex(r,c)][i]=true;
+                    if(solveBoard(board,r,c+1)) return true;
+                    board[r][c]='.';
+                    row[r][i]=false;
+                    column[c][i]=false;
+                    box[getBoxIndex(r,c)][i]=false;
+                }
+            }
+            return false;
+
+        }
+
+    }
+
+    private int getBoxIndex(int r, int c) {
+        return (((r / 3) * 3) + c / 3);
     }
 }
